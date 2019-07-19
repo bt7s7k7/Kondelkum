@@ -28,6 +28,9 @@ namespace B {
 		private void OnDisable() { if (type == Type.OnDisable) { callback.Invoke(); } }
 		private void OnDestroy() { if (type == Type.OnDestroy) { callback.Invoke(); } }
 
-
+		[B.MethodButton("Run")]
+		public void Run() {
+			callback.Invoke();
+		}
 	}
 }
