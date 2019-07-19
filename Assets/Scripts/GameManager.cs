@@ -33,9 +33,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void Start() {
-		if (state == GameSceneState.InLevel) {
-			LoadLevel();
-		}
+		
 	}
 
 	[B.MethodButton("Load level")]
