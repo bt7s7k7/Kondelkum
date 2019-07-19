@@ -293,6 +293,7 @@ MonoBehaviour:
   selectedLevel:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}
     scenePath: Assets/Scenes/Levels/testLevel.unity
+  wasLevelLoadingOperation: 0
   playerPrefab: {fileID: 0}
   levelLoadingState:
     m_PersistentCalls:
@@ -308,6 +309,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  levelFolder: Levels
+  mainMenuScene:
+    sceneAsset: {fileID: 102900000, guid: dd36e773bb1c7f34bbf91c5059ddf613, type: 3}
+    scenePath: Assets/Scenes/MainMenu.unity
 --- !u!4 &1748952861
 Transform:
   m_ObjectHideFlags: 0
