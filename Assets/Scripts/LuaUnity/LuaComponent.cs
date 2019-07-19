@@ -33,5 +33,30 @@ namespace LuaUnity {
 			lua.DoString(code);
 			lua["this"] = null;
 		}
+
+		public void Run(int value) {
+			var lua = LuaState.ReadOrGlobal(state);
+			lua["arg"] = value;
+			Run();
+			lua["arg"] = null;
+		}
+		public void Run(float value) {
+			var lua = LuaState.ReadOrGlobal(state);
+			lua["arg"] = value;
+			Run();
+			lua["arg"] = null;
+		}
+		public void Run(bool value) {
+			var lua = LuaState.ReadOrGlobal(state);
+			lua["arg"] = value;
+			Run();
+			lua["arg"] = null;
+		}
+		public void Run(string value) {
+			var lua = LuaState.ReadOrGlobal(state);
+			lua["arg"] = value;
+			Run();
+			lua["arg"] = null;
+		}
 	}
 }
