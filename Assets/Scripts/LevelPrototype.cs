@@ -10,4 +10,19 @@ public class LevelPrototype : ScriptableObject {
 	public SceneReference scene;
 	[Multiline]
 	public string desc;
+
+	public bool IsCompleted() {
+		return GameManager.instance.IsLevelCompleted(number);
+	}
+
+	public bool IsUnlocked() {
+		bool ret = true;
+		foreach (var level in requirements) {
+			if (!level.IsCompleted()) {
+				ret = false;
+				break;
+			}
+		}
+		return ret;
+	}
 }

@@ -7,14 +7,16 @@ using UnityEngine.UI;
 public class LevelSelectionButton : MonoBehaviour {
 	[Header("References")]
 	public TextMeshProUGUI label;
-	public Image image;
+	public Button button;
 	public TextMeshProUGUI windowLabel;
 	public TextMeshProUGUI windowText;
 	[Header("Level")]
+	[B.RefereceEditor]
 	public LevelPrototype levelPrototype;
 
 
-	private void Start() {
+	[B.MethodButton("Load info")]
+	public void Start() {
 		label.text = levelPrototype.number;
 		windowLabel.text = levelPrototype.number + (levelPrototype.customLabel.Length > 0 ? ": " + levelPrototype.customLabel : "");
 		var desc = "";
@@ -28,6 +30,10 @@ public class LevelSelectionButton : MonoBehaviour {
 		}
 		desc += levelPrototype.desc;
 		windowText.text = desc;
+
+		var buttonColors = button.colors;
+		buttonColors.normalColor = levelPrototype.IsCompleted() ? GameManager.instance.completedLevelButtonColor : (levelPrototype.IsUnlocked() ? GameManager.instance.unlockedLevelButtonColor : GameManager.instance.lockedLevelButtonColor);
+		button.colors = buttonColors;
 	}
 
 	public void OnClick() {

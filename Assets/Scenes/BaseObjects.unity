@@ -499,6 +499,10 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: dd36e773bb1c7f34bbf91c5059ddf613, type: 3}
     scenePath: Assets/Scenes/MainMenu.unity
   loadedLevelID: 0
+  lockedLevelButtonColor: {r: 0.41509432, g: 0, b: 0, a: 1}
+  unlockedLevelButtonColor: {r: 0, g: 0, b: 0, a: 1}
+  completedLevelButtonColor: {r: 0, g: 0.24313726, b: 0, a: 1}
+  completedLevels: []
 --- !u!4 &1748952861
 Transform:
   m_ObjectHideFlags: 0

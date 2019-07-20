@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class GameManager : MonoBehaviour {
 
@@ -27,12 +28,37 @@ public class GameManager : MonoBehaviour {
 	public SceneReference mainMenuScene;
 	public int loadedLevelID;
 
+	[Header("Constants")]
+	public Color lockedLevelButtonColor;
+	public Color unlockedLevelButtonColor;
+	public Color completedLevelButtonColor;
+
+	[Header("Level progress")]
+	public List<string> completedLevels;
+
+
 	private void Awake() {
 		if (!instance) {
 			instance = this;
 		} else {
 			Debug.LogError("A GameManager aleready exists, there can not be >=two");
 		}
+
+		completedLevels = PlayerPrefs.GetString("GameManager_completedLevels", "").Split(',').ToList();
+		if (completedLevels.Count == 1 && completedLevels[0] == "") completedLevels.Clear();
+	}
+
+	private void OnDestroy() {
+		SaveLevelCompletion();
+	}
+
+	[B.MethodButton("Save level completion")]
+	public void SaveLevelCompletion() {
+		PlayerPrefs.SetString("GameManager_completedLevels", String.Join(",", completedLevels));
+	}
+
+	public bool IsLevelCompleted(string number) {
+		return completedLevels.Contains(number);
 	}
 
 	private void Start() {
@@ -80,9 +106,10 @@ public class GameManager : MonoBehaviour {
 		state = GameSceneState.MainMenu;
 	}
 
-	internal void FinishLevel() {
+	public void FinishLevel(string number) {
 		LoadMainMenu();
-		// TODO: Save the level completion
+		if (!completedLevels.Contains(number)) completedLevels.Add(number);
+		SaveLevelCompletion();
 	}
 
 	public void SpawnPlayer(Vector3 pos, Transform parent) {

@@ -6,7 +6,7 @@ public class Goal : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.tag == GameManager.instance.playerPrefab.tag) {
-			GameManager.instance.FinishLevel();
+			LevelManager.instance.Finish();
 		}
 	}
 }

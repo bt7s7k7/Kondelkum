@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 1523228137735868827}
-  image: {fileID: 1523228138823275375}
+  button: {fileID: 1523228138823275372}
   windowLabel: {fileID: 4619610254475095942}
   windowText: {fileID: 6513948980322106193}
   levelPrototype: {fileID: 0}
