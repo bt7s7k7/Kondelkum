@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour {
 		MainMenu,
 		InLevel
 	}
+
 	[Header("Level loading")]
 	public GameSceneState state;
 	public SceneReference selectedLevel;
@@ -48,6 +50,8 @@ public class GameManager : MonoBehaviour {
 		Debug.Log("Loading level: " + selectedLevel);
 		levelLoadingOperations.Add(SceneManager.LoadSceneAsync(selectedLevel, LoadSceneMode.Additive));
 		loadedLevelID = SceneUtility.GetBuildIndexByScenePath(selectedLevel);
+
+		state = GameSceneState.InLevel;
 	}
 
 	[B.MethodButton("Unload levels and main menu")]
@@ -72,6 +76,13 @@ public class GameManager : MonoBehaviour {
 		}
 		Debug.Log("Loading main menu");
 		levelLoadingOperations.Add(SceneManager.LoadSceneAsync(mainMenuScene, LoadSceneMode.Additive));
+
+		state = GameSceneState.MainMenu;
+	}
+
+	internal void FinishLevel() {
+		LoadMainMenu();
+		// TODO: Save the level completion
 	}
 
 	public void SpawnPlayer(Vector3 pos) {
