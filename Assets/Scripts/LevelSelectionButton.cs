@@ -8,8 +8,6 @@ public class LevelSelectionButton : MonoBehaviour {
 	[Header("References")]
 	public TextMeshProUGUI label;
 	public Button button;
-	public TextMeshProUGUI windowLabel;
-	public TextMeshProUGUI windowText;
 	[Header("Level")]
 	[B.RefereceEditor]
 	public LevelPrototype levelPrototype;
@@ -18,7 +16,18 @@ public class LevelSelectionButton : MonoBehaviour {
 	[B.MethodButton("Load info")]
 	public void Start() {
 		label.text = levelPrototype.number;
-		windowLabel.text = levelPrototype.number + (levelPrototype.customLabel.Length > 0 ? ": " + levelPrototype.customLabel : "");
+		
+
+		var buttonColors = button.colors;
+		buttonColors.normalColor = levelPrototype.IsCompleted() ? GameManager.instance.completedLevelButtonColor : (levelPrototype.IsUnlocked() ? GameManager.instance.unlockedLevelButtonColor : GameManager.instance.lockedLevelButtonColor);
+		buttonColors.disabledColor = buttonColors.normalColor;
+		button.colors = buttonColors;
+
+		button.interactable = levelPrototype.IsUnlocked();
+	}
+
+	public void OnHover() {
+		LevelButtonInfo.instance.label.text = levelPrototype.number + (levelPrototype.customLabel.Length > 0 ? ": " + levelPrototype.customLabel : "");
 		var desc = "";
 		if (levelPrototype.requirements.Length > 0) {
 			desc += "Requires: ";
@@ -29,16 +38,14 @@ public class LevelSelectionButton : MonoBehaviour {
 			}
 		}
 		desc += levelPrototype.desc;
-		windowText.text = desc;
-
-		var buttonColors = button.colors;
-		buttonColors.normalColor = levelPrototype.IsCompleted() ? GameManager.instance.completedLevelButtonColor : (levelPrototype.IsUnlocked() ? GameManager.instance.unlockedLevelButtonColor : GameManager.instance.lockedLevelButtonColor);
-		button.colors = buttonColors;
+		LevelButtonInfo.instance.desc.text = desc;
 	}
 
 	public void OnClick() {
-		GameManager.instance.selectedLevel = levelPrototype.scene;
-		GameManager.instance.LoadLevel();
+		if (levelPrototype.IsUnlocked()) {
+			GameManager.instance.selectedLevel = levelPrototype.scene;
+			GameManager.instance.LoadLevel();
+		}
 	}
 
 }

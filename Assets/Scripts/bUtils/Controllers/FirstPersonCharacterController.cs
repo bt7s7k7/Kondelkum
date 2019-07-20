@@ -15,6 +15,8 @@ namespace B {
 			public float fallBoostThreshold = 0.1f;
 			public float maxFallSpeed = 100;
 			protected float controllerVerticalSpeed;
+			public float minY = -100;
+			public Vector3 safePos;
 #if UNITY_EDITOR
 			protected Vector3 debug_toMove;
 			protected Vector3 debug_delta;
@@ -30,6 +32,10 @@ namespace B {
 				body = transform;
 			}
 
+			virtual protected void Start() {
+				safePos = body.position;
+			}
+
 			virtual protected void Update() {
 
 				HandleLooking();
@@ -37,6 +43,11 @@ namespace B {
 				HandleJumping();
 				HandleMovement();
 				ResetTasks();
+
+				if (body.position.y < minY) {
+					controllerVerticalSpeed = 0;
+					body.position = safePos;
+				}
 			}
 
 			virtual protected void HandleMovement() {

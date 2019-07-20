@@ -327,8 +327,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 1523228137735868827}
   button: {fileID: 1523228138823275372}
-  windowLabel: {fileID: 4619610254475095942}
-  windowText: {fileID: 6513948980322106193}
   levelPrototype: {fileID: 0}
 --- !u!114 &6391476417254239851
 MonoBehaviour:
@@ -347,26 +345,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7534640329498071878}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7534640329498071878}
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 7704579657428537329}
+          m_MethodName: OnHover
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

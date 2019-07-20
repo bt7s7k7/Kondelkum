@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: dd36e773bb1c7f34bbf91c5059ddf613
+  - enabled: 1
+    path: Assets/Scenes/Levels/testParkour.unity
+    guid: 31ac73b6580ae8e44b73a3b89f376f4a
   m_configObjects: {}
