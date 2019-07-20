@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Subtract
-  m_Shader: {fileID: 4800000, guid: b36682a2a82e54bb28920dd1a712dc4d, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f8a02325f7e858c4f92872d3e7a6b4fe,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
