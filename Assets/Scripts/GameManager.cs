@@ -85,9 +85,8 @@ public class GameManager : MonoBehaviour {
 		// TODO: Save the level completion
 	}
 
-	public void SpawnPlayer(Vector3 pos) {
-		var player = Instantiate(playerPrefab, pos, Quaternion.identity, null);
-		SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByBuildIndex(loadedLevelID));
+	public void SpawnPlayer(Vector3 pos, Transform parent) {
+		var player = Instantiate(playerPrefab, pos, Quaternion.identity, parent);
 	}
 
 	private void Update() {

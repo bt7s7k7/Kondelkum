@@ -5,6 +5,6 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour {
 
 	private void Start() {
-		GameManager.instance.SpawnPlayer(transform.position);
+		GameManager.instance.SpawnPlayer(transform.position, transform);
 	}
 }
