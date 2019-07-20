@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	public UnityEvent levelLoadingEnded;
 	public string levelFolder = "Levels";
 	public SceneReference mainMenuScene;
+	public int loadedLevelID;
 
 	private void Awake() {
 		if (!instance) {
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour {
 		}
 		Debug.Log("Loading level: " + selectedLevel);
 		levelLoadingOperations.Add(SceneManager.LoadSceneAsync(selectedLevel, LoadSceneMode.Additive));
+		loadedLevelID = SceneUtility.GetBuildIndexByScenePath(selectedLevel);
 	}
 
 	[B.MethodButton("Unload levels and main menu")]
@@ -70,6 +72,11 @@ public class GameManager : MonoBehaviour {
 		}
 		Debug.Log("Loading main menu");
 		levelLoadingOperations.Add(SceneManager.LoadSceneAsync(mainMenuScene, LoadSceneMode.Additive));
+	}
+
+	public void SpawnPlayer(Vector3 pos) {
+		var player = Instantiate(playerPrefab, pos, Quaternion.identity, null);
+		SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByBuildIndex(loadedLevelID));
 	}
 
 	private void Update() {
