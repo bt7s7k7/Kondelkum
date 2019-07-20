@@ -36,6 +36,10 @@ public class GameManager : MonoBehaviour {
 	[Header("Level progress")]
 	public List<string> completedLevels;
 
+	[Header("References")]
+	public GameObject pauseMenu;
+	public B.Controll.BasicControllEmitter controllEmitter;
+
 
 	private void Awake() {
 		if (!instance) {
@@ -65,6 +69,16 @@ public class GameManager : MonoBehaviour {
 		
 	}
 
+	public void TogglePauseMenu() {
+		if (state == GameSceneState.InLevel) {
+			bool pauseActive = !pauseMenu.activeSelf;
+			pauseMenu.SetActive(pauseActive);
+			controllEmitter.enabled = !pauseActive;
+			Time.timeScale = pauseActive ? 0 : 1;
+
+		}
+	}
+
 	[B.MethodButton("Load level")]
 	public void LoadLevel() {
 		UnloadLevelsAndMainMenu();
@@ -82,6 +96,9 @@ public class GameManager : MonoBehaviour {
 
 	[B.MethodButton("Unload levels and main menu")]
 	public void UnloadLevelsAndMainMenu() {
+		if (pauseMenu.activeSelf) {
+			TogglePauseMenu();
+		}
 		var count = SceneManager.sceneCount;
 		for (var i = 1; i < count; i++) {
 			var scene = SceneManager.GetSceneAt(i);
@@ -95,7 +112,6 @@ public class GameManager : MonoBehaviour {
 	[B.MethodButton("Load main menu")]
 	public void LoadMainMenu() {
 		UnloadLevelsAndMainMenu();
-
 		if (mainMenuScene.ScenePath == "") {
 			Debug.LogError("Main menu scene not set");
 			return;
