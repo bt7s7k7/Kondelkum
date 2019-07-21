@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072b769c02ed8d24688bdf4286457fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: 0
   selectedLevel:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}
     scenePath: Assets/Scenes/Levels/testLevel.unity

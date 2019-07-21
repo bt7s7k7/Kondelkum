@@ -66,7 +66,9 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void Start() {
-		
+		if (state == GameSceneState.MainMenu && SceneManager.sceneCount == 1) {
+			LoadMainMenu();
+		}
 	}
 
 	public void TogglePauseMenu() {
