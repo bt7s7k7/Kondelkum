@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d518de92a9e80a4e819b83234fbad79, type: 3}
+  m_Name: testMultiworld
+  m_EditorClassIdentifier: 
+  customLabel: Multiworld test
+  number: 1-2
+  requirements:
+  - {fileID: 11400000, guid: 0ec8b4a485766644abc66771d52f6247, type: 2}
+  scene:
+    sceneAsset: {fileID: 102900000, guid: d0cbf45c9edf60847a5af3cbe7048056, type: 3}
+    scenePath: Assets/Scenes/Levels/testMultiworld.unity
+  desc: 'For testing mirrors and portals. '

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: testLevel
   m_EditorClassIdentifier: 
   customLabel: Test Level
-  number: 0-1
+  number: 1
   requirements: []
   scene:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}

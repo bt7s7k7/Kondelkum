@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: testParkour
   m_EditorClassIdentifier: 
   customLabel: Parkour Test
-  number: 0-2
+  number: 1-1
   requirements:
   - {fileID: 11400000, guid: 0ec8b4a485766644abc66771d52f6247, type: 2}
   scene:
