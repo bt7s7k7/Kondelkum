@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WorldBMaterial 1
+  m_Name: WorldBMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 09dad55e0322a7d40bb990437d2fefb1,
     type: 3}
   m_ShaderKeywords: _ENVIRONMENTREFLECTIONS_OFF

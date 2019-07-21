@@ -341,7 +341,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1.7
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -421,6 +421,9 @@ MonoBehaviour:
   playerCamera: {fileID: 8136251262483043474}
   worldACamera: {fileID: 93166841358120156}
   worldBCamera: {fileID: 3717121865687153391}
+  worldALayer: WorldA
+  worldBLayer: WorldB
+  isInBWorld: 0
   player: {fileID: 0}
   prevScreenSize: {x: 0, y: 0}
   wordlARender: {fileID: 0}

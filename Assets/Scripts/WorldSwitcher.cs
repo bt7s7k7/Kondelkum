@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,20 @@ public class WorldSwitcher : MonoBehaviour {
 	public Camera playerCamera;
 	public Camera worldACamera;
 	public Camera worldBCamera;
+
+	public string worldALayer = "WorldA";
+	public string worldBLayer = "WorldB";
+	public bool isInBWorld = false;
+
+
+	[B.MethodButton("Switch")]
+	public void Switch() {
+		var isLayer = LayerMask.NameToLayer(isInBWorld ? worldALayer : worldBLayer);
+		gameObject.layer = isLayer;
+		playerCamera.cullingMask = isInBWorld ? worldACamera.cullingMask : worldBCamera.cullingMask;
+		isInBWorld = !isInBWorld;
+	}
+
 	public GameObject player;
 
 	public Vector2Int prevScreenSize;
