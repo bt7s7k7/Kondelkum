@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
 	[Header("References")]
 	public GameObject pauseMenu;
 	public B.Controll.BasicControllEmitter controllEmitter;
+	public B.Controll.MouseLocker mouseLocker;
 
 
 	private void Awake() {
@@ -75,6 +76,7 @@ public class GameManager : MonoBehaviour {
 		if (state == GameSceneState.InLevel) {
 			bool pauseActive = !pauseMenu.activeSelf;
 			pauseMenu.SetActive(pauseActive);
+			mouseLocker.hideMouse = mouseLocker.lockMouse = !pauseActive;
 			controllEmitter.enabled = !pauseActive;
 			Time.timeScale = pauseActive ? 0 : 1;
 
@@ -84,7 +86,7 @@ public class GameManager : MonoBehaviour {
 	[B.MethodButton("Load level")]
 	public void LoadLevel() {
 		UnloadLevelsAndMainMenu();
-
+		mouseLocker.hideMouse = mouseLocker.lockMouse = true;
 		if (selectedLevel.ScenePath == "") {
 			Debug.LogError("No level selected for loading");
 			return;
@@ -114,6 +116,7 @@ public class GameManager : MonoBehaviour {
 	[B.MethodButton("Load main menu")]
 	public void LoadMainMenu() {
 		UnloadLevelsAndMainMenu();
+		mouseLocker.hideMouse = mouseLocker.lockMouse = false;
 		if (mainMenuScene.ScenePath == "") {
 			Debug.LogError("Main menu scene not set");
 			return;
