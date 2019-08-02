@@ -5,14 +5,18 @@ using UnityEngine;
 
 namespace LevelElements {
 	public class Indicator : MonoBehaviour {
-		public MeshRenderer targetRenderer;
+		public MeshRenderer[] targetRenderers;
 		public Material offMaterial;
 		public Material onMaterial;
 		public bool state;
 
 		public virtual void SetState(bool newState) {
 			state = newState;
-			targetRenderer.material = state ? onMaterial : offMaterial;
+			var matToSet = state ? onMaterial : offMaterial;
+			foreach (var renderer in targetRenderers) {
+				if (!renderer) continue;
+				renderer.material = matToSet;
+			}
 		}
 
 		[B.MethodButton("Activate")]
@@ -21,5 +25,10 @@ namespace LevelElements {
 		[B.MethodButton("Deactivate")]
 		public void SetInactive() => SetState(false);
 		public void ToggleState() => SetState(!state);
+
+		[B.MethodButton("Refresh renderers")]
+		public void RefreshRenderers() {
+			targetRenderers = GetComponentsInChildren<MeshRenderer>();
+		}
 	}
 }

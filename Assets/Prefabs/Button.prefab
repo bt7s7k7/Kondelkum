@@ -219,11 +219,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ed1db1d16b6d34eba5d75e8b4a50a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRenderer: {fileID: 2602977034450885996}
+  targetRenderers:
+  - {fileID: 2602977034450885996}
   offMaterial: {fileID: 2100000, guid: 37552d126f789e6488fbf5e4a5eb0ed2, type: 2}
   onMaterial: {fileID: 2100000, guid: da830449f77978b4c96bc8409e7f5423, type: 2}
   state: 0
   onStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: B.BoolEvent, Assembly-CSharp, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null
+  onStateChangeInverted:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: B.BoolEvent, Assembly-CSharp, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null
