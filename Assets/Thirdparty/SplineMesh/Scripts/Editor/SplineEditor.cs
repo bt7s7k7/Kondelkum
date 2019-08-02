@@ -23,7 +23,7 @@ namespace SplineMesh {
             Up
         }
 
-        private SplineNode selection;
+        private static SplineNode selection;
         private SelectionType selectionType;
         private bool mustCreateNewNode = false;
         private SerializedProperty nodesProp;

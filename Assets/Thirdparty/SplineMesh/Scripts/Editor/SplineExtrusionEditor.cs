@@ -14,7 +14,7 @@ namespace SplineMesh {
         private SerializedProperty vertices;
 
         private SplineExtrusion se;
-        private ExtrusionSegment.Vertex selection = null;
+        private static ExtrusionSegment.Vertex selection = null;
 
         private void OnEnable() {
             se = (SplineExtrusion)target;
