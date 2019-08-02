@@ -10,6 +10,7 @@ namespace B {
 			public Transform body;
 			public float speed = 10;
 			public float sprintMul = 2;
+			public float crouchMul = 0.5f;
 			public float jumpForce = 5;
 			public float fallBoost = 2;
 			public float fallBoostThreshold = 0.1f;
@@ -63,7 +64,7 @@ namespace B {
 				debug_delta = delta;
 #endif
 
-				controller.Move(delta * Time.deltaTime * speed * (toSprint ? sprintMul : 1));
+				controller.Move(delta * Time.deltaTime * speed * (toSprint ? sprintMul : 1) * (toCrouch ? crouchMul : 1));
 			}
 
 			virtual protected void HandleJumping() {
