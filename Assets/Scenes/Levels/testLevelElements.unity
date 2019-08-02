@@ -1173,7 +1173,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 788010981}
     SiblingIndex: 3
-  objectVersionSerialized: 127
+  objectVersionSerialized: 130
 --- !u!23 &335722556
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -2041,7 +2041,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 1801860510}
     SiblingIndex: 1
-  objectVersionSerialized: 190
+  objectVersionSerialized: 193
 --- !u!23 &614292943
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -2875,7 +2875,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 788010981}
     SiblingIndex: 5
-  objectVersionSerialized: 149
+  objectVersionSerialized: 152
 --- !u!23 &693427737
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -4408,7 +4408,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 1801860510}
     SiblingIndex: 0
-  objectVersionSerialized: 186
+  objectVersionSerialized: 189
 --- !u!23 &763437249
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -13064,7 +13064,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 1801860510}
     SiblingIndex: 2
-  objectVersionSerialized: 81
+  objectVersionSerialized: 84
 --- !u!23 &1047365335
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -13911,7 +13911,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 788010981}
     SiblingIndex: 2
-  objectVersionSerialized: 114
+  objectVersionSerialized: 117
 --- !u!23 &1048796134
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -14857,7 +14857,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 788010981}
     SiblingIndex: 4
-  objectVersionSerialized: 154
+  objectVersionSerialized: 157
 --- !u!23 &1336138263
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -21019,7 +21019,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 788010981}
     SiblingIndex: 0
-  objectVersionSerialized: 124
+  objectVersionSerialized: 127
 --- !u!23 &1874250652
 MeshRenderer:
   m_ObjectHideFlags: 8
@@ -21805,7 +21805,7 @@ MonoBehaviour:
     LossyScale: {x: 1, y: 1, z: 1}
     Parent: {fileID: 788010981}
     SiblingIndex: 1
-  objectVersionSerialized: 102
+  objectVersionSerialized: 105
 --- !u!23 &2103007673
 MeshRenderer:
   m_ObjectHideFlags: 8
