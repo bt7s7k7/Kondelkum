@@ -6,13 +6,14 @@ using UnityEngine;
 public class LevelPrototype : ScriptableObject {
 	public string customLabel;
 	public string number;
+	public string id;
 	public LevelPrototype[] requirements;
 	public SceneReference scene;
 	[Multiline]
 	public string desc;
 
 	public bool IsCompleted() {
-		return GameManager.instance.IsLevelCompleted(number);
+		return GameManager.instance.IsLevelCompleted(id);
 	}
 
 	public bool IsUnlocked() {

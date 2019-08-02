@@ -308,9 +308,11 @@ GameObject:
   - component: {fileID: 7581348427231426201}
   - component: {fileID: 6371907207922297428}
   - component: {fileID: 179931322129410464}
+  - component: {fileID: 1463224362613953933}
+  - component: {fileID: 2294238402376971450}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,6 +383,7 @@ MonoBehaviour:
   body: {fileID: 1030204247867381957}
   speed: 6
   sprintMul: 2
+  crouchMul: 0.5
   jumpForce: 5
   fallBoost: 2
   fallBoostThreshold: 0
@@ -429,3 +432,36 @@ MonoBehaviour:
   wordlARender: {fileID: 0}
   worldBRender: {fileID: 0}
   renderScale: 1
+--- !u!114 &1463224362613953933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7441321331296418515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e46cb7c06fa7b4daf0ff8e1bf91a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  maxDist: 2
+  once: 1
+  rayOrigin: {fileID: 906066594380318706}
+--- !u!114 &2294238402376971450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7441321331296418515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f24dd91d9e098d4496bf3d8fcdfea8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list: {fileID: 0}
+  findListOnStart: 1
+  target: {fileID: 1463224362613953933}

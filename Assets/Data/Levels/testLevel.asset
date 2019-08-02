@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customLabel: Test Level
   number: 1
+  id: test_1
   requirements: []
   scene:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}

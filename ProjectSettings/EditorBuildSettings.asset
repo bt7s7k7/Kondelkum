@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/testMultiworld.unity
     guid: d0cbf45c9edf60847a5af3cbe7048056
+  - enabled: 1
+    path: Assets/Scenes/Levels/testLevelElements.unity
+    guid: 4ee2bd7dc9fbe2f45b6900fb8e0e4e9b
   m_configObjects: {}

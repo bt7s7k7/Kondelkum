@@ -116,6 +116,38 @@ namespace B {
 		}
 	}
 
+	static class MenuItems {
+		[MenuItem("GameObject/Move to casted position and align")]
+		static void MoveToCastAndAlign() {
+			if (Selection.activeTransform) {
+				Transform active = Selection.activeTransform;
+				Camera sceneCamera = SceneView.lastActiveSceneView.camera;
+
+				Ray ray = new Ray(sceneCamera.transform.position, sceneCamera.transform.TransformDirection(Vector3.forward));
+
+				if (Physics.Raycast(ray, out RaycastHit hit)) {
+					Undo.RecordObject(active.transform, "Move to casted position and align");
+					active.position = hit.point;
+					active.position = new Vector3(
+						Mathf.Round(active.position.x * 2) / 2,
+						Mathf.Round(active.position.y * 2) / 2,
+						Mathf.Round(active.position.z * 2) / 2
+						);
+				}
+			}
+		}
+		[MenuItem("GameObject/Align to grid &#%F")]
+		static void AlignToGrid() {
+			Transform active = Selection.activeTransform;
+			Undo.RecordObject(active.transform, "Align to grid");
+			active.position = new Vector3(
+									Mathf.Round(active.position.x * 2) / 2,
+									Mathf.Round(active.position.y * 2) / 2,
+									Mathf.Round(active.position.z * 2) / 2
+									);
+		}
+	}
+
 	/*[CustomEditor(typeof(ValueStore))]
 	[CanEditMultipleObjects]
 	class ScriptableObjectBeditor : Beditor {

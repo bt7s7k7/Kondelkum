@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d518de92a9e80a4e819b83234fbad79, type: 3}
+  m_Name: testElements
+  m_EditorClassIdentifier: 
+  customLabel: Level Elements Test
+  number: 2
+  id: test_2
+  requirements:
+  - {fileID: 11400000, guid: 7ff08beed601f92409d522d5c2012da7, type: 2}
+  - {fileID: 11400000, guid: 1a650b09a89db8a4ca14a45fac5ff754, type: 2}
+  scene:
+    sceneAsset: {fileID: 102900000, guid: 4ee2bd7dc9fbe2f45b6900fb8e0e4e9b, type: 3}
+    scenePath: Assets/Scenes/Levels/testLevelElements.unity
+  desc: "This level test level elements such as:\n- Buttons\n- Pressure plates\n-
+    Spawners \n- Cubes"

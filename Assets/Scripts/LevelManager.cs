@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour {
 	public LevelPrototype prototype;
 
 	public void Finish() {
-		GameManager.instance.FinishLevel(prototype.number);
+		GameManager.instance.FinishLevel(prototype.id);
 	}
 
 	private void Awake() {
