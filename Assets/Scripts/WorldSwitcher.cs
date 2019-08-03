@@ -23,7 +23,7 @@ public class WorldSwitcher : MonoBehaviour {
 
 	[B.MethodButton("Switch")]
 	public void Switch() {
-		if (LevelManager.instance.prototype.allowWorldSwitch) {
+		
 			var isLayer = LayerMask.NameToLayer(isInBWorld ? worldALayer : worldBLayer);
 			gameObject.layer = isLayer;
 			playerCamera.cullingMask = isInBWorld ? worldACamera.cullingMask : worldBCamera.cullingMask;
@@ -32,7 +32,11 @@ public class WorldSwitcher : MonoBehaviour {
 			interacter.raycastMask = isInBWorld ? worldBMask : worldAMask;
 
 			if (isInBWorld) particlesB.Emit(particleEmitCount); else particlesA.Emit(particleEmitCount);
-		}
+		
+	}
+
+	public void SwitchIfEnabled() {
+		if (LevelManager.instance.prototype.allowWorldSwitch) Switch();
 	}
 
 	public GameObject player;
