@@ -310,6 +310,8 @@ GameObject:
   - component: {fileID: 179931322129410464}
   - component: {fileID: 1463224362613953933}
   - component: {fileID: 2294238402376971450}
+  - component: {fileID: 4039480581044250509}
+  - component: {fileID: 5900011345247878165}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -465,3 +467,34 @@ MonoBehaviour:
   list: {fileID: 0}
   findListOnStart: 1
   target: {fileID: 1463224362613953933}
+--- !u!114 &4039480581044250509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7441321331296418515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d7ed031b268ad44be00da32c1d6947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewMaterial: {fileID: 2100000, guid: 86aeb3c3f95fb764fb3d9767e107b9ed, type: 2}
+  previewMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  gotCube: {fileID: 0}
+  toBlock: {fileID: 1463224362613953933}
+--- !u!114 &5900011345247878165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7441321331296418515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f24dd91d9e098d4496bf3d8fcdfea8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list: {fileID: 0}
+  findListOnStart: 1
+  target: {fileID: 4039480581044250509}
