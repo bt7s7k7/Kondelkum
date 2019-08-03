@@ -30,9 +30,16 @@ public class CubeStore : B.Controll.AbstractSink {
 				gotCube.transform.position = pos;
 				gotCube.transform.rotation = rotation;
 				var rigidbody = gotCube.GetComponent<Rigidbody>();
+				var addCube = gotCube.GetComponent<AddCube>();
 				if (rigidbody) {
 					rigidbody.velocity = Vector3.zero;
 					rigidbody.angularVelocity = Vector3.zero;
+				}
+				if (addCube.isOneWorld) {
+					gotCube.layer = gameObject.layer;
+					for (var i = 0; i < gotCube.transform.childCount; i++) {
+						gotCube.transform.GetChild(i).gameObject.layer = gameObject.layer;
+					}
 				}
 				gotCube.SetActive(true);
 				gotCube = null;

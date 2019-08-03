@@ -9,6 +9,7 @@ public class LevelPrototype : ScriptableObject {
 	public string id;
 	public LevelPrototype[] requirements;
 	public SceneReference scene;
+	public bool allowWorldSwitch;
 	[Multiline]
 	public string desc;
 

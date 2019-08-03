@@ -19,4 +19,5 @@ MonoBehaviour:
   scene:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}
     scenePath: Assets/Scenes/Levels/testLevel.unity
+  allowWorldSwitch: 1
   desc: Test level built for testing

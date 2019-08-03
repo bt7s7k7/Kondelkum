@@ -9,18 +9,30 @@ public class WorldSwitcher : MonoBehaviour {
 	public Camera playerCamera;
 	public Camera worldACamera;
 	public Camera worldBCamera;
-
+	public B.Controll.Interacter interacter;
+	public LayerMask worldAMask;
+	public LayerMask worldBMask;
+	public ParticleSystem particlesA;
+	public ParticleSystem particlesB;
+	[Space]
 	public string worldALayer = "WorldA";
 	public string worldBLayer = "WorldB";
 	public bool isInBWorld = false;
+	public int particleEmitCount = 40;
 
 
 	[B.MethodButton("Switch")]
 	public void Switch() {
-		var isLayer = LayerMask.NameToLayer(isInBWorld ? worldALayer : worldBLayer);
-		gameObject.layer = isLayer;
-		playerCamera.cullingMask = isInBWorld ? worldACamera.cullingMask : worldBCamera.cullingMask;
-		isInBWorld = !isInBWorld;
+		if (LevelManager.instance.prototype.allowWorldSwitch) {
+			var isLayer = LayerMask.NameToLayer(isInBWorld ? worldALayer : worldBLayer);
+			gameObject.layer = isLayer;
+			playerCamera.cullingMask = isInBWorld ? worldACamera.cullingMask : worldBCamera.cullingMask;
+			isInBWorld = !isInBWorld;
+
+			interacter.raycastMask = isInBWorld ? worldBMask : worldAMask;
+
+			if (isInBWorld) particlesB.Emit(particleEmitCount); else particlesA.Emit(particleEmitCount);
+		}
 	}
 
 	public GameObject player;
