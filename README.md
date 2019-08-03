@@ -1,5 +1,5 @@
 # Kondelkum
-Kondelkum is (*will be*) a puzzle game focused on world switching mechanics.
+Kondelkum is (*will be*) a puzzle game focused on world switching mechanics. Development news are shared in a [playlist](https://www.youtube.com/playlist?list=PL_01GZnwpJ6A6L-GDkaAzy8ICr7dEavj1) on my channel.
 
 ![03_11_2019_02_11_33](https://user-images.githubusercontent.com/26630940/62411784-daddda00-b5f8-11e9-8e1c-80fa3a6f51e6.png)
 
