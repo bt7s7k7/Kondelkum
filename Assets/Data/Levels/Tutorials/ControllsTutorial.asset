@@ -17,8 +17,8 @@ MonoBehaviour:
   id: tutorial_controlls
   requirements: []
   scene:
-    sceneAsset: {fileID: 0}
-    scenePath: 
+    sceneAsset: {fileID: 102900000, guid: 85965b64b313a4d4ab8a62ee4730b68e, type: 3}
+    scenePath: Assets/Scenes/Levels/Tutorials/ControllsTutorial.unity
   allowWorldSwitch: 0
   nextLevel: {fileID: 0}
   desc: A tutorial level teaching basic movement controlls

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28462127, g: 0.37120965, b: 0.49880528, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -96,7 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 112000004, guid: c4378864429a36e41aa9b5c252a807ec,
+  m_LightingDataAsset: {fileID: 112000004, guid: cd9288f93f40e6647bf28b19cc596302,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -1252,7 +1252,7 @@ MonoBehaviour:
   state: 0
   selectedLevel:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}
-    scenePath: Assets/Scenes/Levels/testLevel.unity
+    scenePath: Assets/Scenes/Levels/TestLevels/testLevel.unity
   wasLevelLoadingOperation: 0
   playerPrefab: {fileID: 7441321331296418515, guid: eaf2c7787fe82384b9b242a77baceae6,
     type: 3}
