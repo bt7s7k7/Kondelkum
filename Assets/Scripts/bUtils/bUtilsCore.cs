@@ -116,6 +116,12 @@ namespace B {
 		}
 	}
 
+	[CustomEditor(typeof(ScriptableObject), true, isFallback = true)]
+	[CanEditMultipleObjects]
+	class BSOEditor : Beditor {
+
+	}
+
 	static class MenuItems {
 		[MenuItem("GameObject/Move to casted position and align")]
 		static void MoveToCastAndAlign() {
