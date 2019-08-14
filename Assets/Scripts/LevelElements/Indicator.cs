@@ -9,6 +9,7 @@ namespace LevelElements {
 		public Material offMaterial;
 		public Material onMaterial;
 		public bool state;
+		public bool findRenderersAfterStart;
 
 		public virtual void SetState(bool newState) {
 			state = newState;
@@ -29,6 +30,14 @@ namespace LevelElements {
 		[B.MethodButton("Refresh renderers")]
 		public void RefreshRenderers() {
 			targetRenderers = GetComponentsInChildren<MeshRenderer>();
+		}
+
+		private void Update() {
+			if (findRenderersAfterStart) {
+				findRenderersAfterStart = false;
+				targetRenderers = GetComponentsInChildren<MeshRenderer>();
+				SetState(state);
+			}
 		}
 	}
 }
