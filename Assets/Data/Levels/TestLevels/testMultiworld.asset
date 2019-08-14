@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d518de92a9e80a4e819b83234fbad79, type: 3}
-  m_Name: testParkour
+  m_Name: testMultiworld
   m_EditorClassIdentifier: 
-  customLabel: Parkour Test
-  number: 1-1
-  id: test_1_1
+  customLabel: Multiworld test
+  number: 1-2
+  id: test_1_2
   requirements:
   - {fileID: 11400000, guid: 0ec8b4a485766644abc66771d52f6247, type: 2}
   scene:
-    sceneAsset: {fileID: 102900000, guid: 31ac73b6580ae8e44b73a3b89f376f4a, type: 3}
-    scenePath: Assets/Scenes/Levels/testParkour.unity
+    sceneAsset: {fileID: 102900000, guid: d0cbf45c9edf60847a5af3cbe7048056, type: 3}
+    scenePath: Assets/Scenes/Levels/TestLevels/testMultiworld.unity
   allowWorldSwitch: 0
-  nextLevel: {fileID: 11400000, guid: 7ff08beed601f92409d522d5c2012da7, type: 2}
-  desc: For testing of parkour capabilities of the player controller.
+  nextLevel: {fileID: 11400000, guid: e062a23e6e58acc40a9f78c68e4b822b, type: 2}
+  desc: 'For testing mirrors and portals. '

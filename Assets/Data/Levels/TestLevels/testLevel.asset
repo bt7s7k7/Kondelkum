@@ -18,7 +18,7 @@ MonoBehaviour:
   requirements: []
   scene:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}
-    scenePath: Assets/Scenes/Levels/testLevel.unity
+    scenePath: Assets/Scenes/Levels/TestLevels/testLevel.unity
   allowWorldSwitch: 1
   nextLevel: {fileID: 11400000, guid: 1a650b09a89db8a4ca14a45fac5ff754, type: 2}
   desc: Test level built for testing
