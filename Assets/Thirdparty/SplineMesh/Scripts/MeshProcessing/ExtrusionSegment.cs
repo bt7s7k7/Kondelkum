@@ -204,6 +204,8 @@ namespace SplineMesh {
             if(mc != null) {
                 mc.sharedMesh = mf.sharedMesh;
             }
+
+			isDirty = false;
         }
 
         [Serializable]
