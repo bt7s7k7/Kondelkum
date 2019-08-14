@@ -20,4 +20,6 @@ MonoBehaviour:
   scene:
     sceneAsset: {fileID: 102900000, guid: 31ac73b6580ae8e44b73a3b89f376f4a, type: 3}
     scenePath: Assets/Scenes/Levels/testParkour.unity
+  allowWorldSwitch: 0
+  nextLevel: {fileID: 11400000, guid: 7ff08beed601f92409d522d5c2012da7, type: 2}
   desc: For testing of parkour capabilities of the player controller.

@@ -127,10 +127,15 @@ public class GameManager : MonoBehaviour {
 		state = GameSceneState.MainMenu;
 	}
 
-	public void FinishLevel(string number) {
-		LoadMainMenu();
+	public void FinishLevel(string number, SceneReference nextLevel) {
 		if (!completedLevels.Contains(number)) completedLevels.Add(number);
 		SaveLevelCompletion();
+		if (nextLevel != null) {
+			selectedLevel = nextLevel;
+			LoadLevel();
+		} else LoadMainMenu();
+
+		
 	}
 
 	public void SpawnPlayer(Vector3 pos, Transform parent) {
