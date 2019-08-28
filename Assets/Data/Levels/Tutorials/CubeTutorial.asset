@@ -22,4 +22,4 @@ MonoBehaviour:
     scenePath: Assets/Scenes/Levels/Tutorials/CubeTutorial.unity
   allowWorldSwitch: 0
   nextLevel: {fileID: 0}
-  desc: 
+  desc: Level teaching interaction with pressure plates
