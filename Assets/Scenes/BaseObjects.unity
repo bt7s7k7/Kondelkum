@@ -96,7 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 112000004, guid: cd9288f93f40e6647bf28b19cc596302,
+  m_LightingDataAsset: {fileID: 112000004, guid: fdf36aa0566abaf4097c130af4d01806,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -524,7 +524,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.543735e+30, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 5.3e-44, y: 4.594e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

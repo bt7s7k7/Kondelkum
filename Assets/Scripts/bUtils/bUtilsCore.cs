@@ -71,7 +71,7 @@ namespace B {
 #if UNITY_EDITOR
 	[CustomEditor(typeof(MonoBehaviour), true, isFallback = true)]
 	[CanEditMultipleObjects]
-	partial class Beditor : Editor {
+	public partial class Beditor : Editor {
 		public override void OnInspectorGUI() {
 			base.OnInspectorGUI();
 			if (serializedObject.isEditingMultipleObjects) return;
@@ -118,7 +118,7 @@ namespace B {
 
 	[CustomEditor(typeof(ScriptableObject), true, isFallback = true)]
 	[CanEditMultipleObjects]
-	class BSOEditor : Beditor {
+	public class BSOEditor : Beditor {
 
 	}
 

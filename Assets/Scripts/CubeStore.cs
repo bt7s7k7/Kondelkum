@@ -57,7 +57,7 @@ public class CubeStore : B.Controll.AbstractSink {
 	public void Store(GameObject cube) {
 		if (!gotCube) {
 			gotCube = cube;
-			cube.SetActive(false);
+			cube.transform.position = Vector3.up * -1000;
 			toBlock.enabled = false;
 			lastDown = true;
 		}

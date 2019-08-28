@@ -12,6 +12,7 @@ namespace LevelElements {
 		public bool findRenderersAfterStart;
 
 		public virtual void SetState(bool newState) {
+			if (targetRenderers.Length > 0 && targetRenderers[0] == null) RefreshRenderers();
 			state = newState;
 			var matToSet = state ? onMaterial : offMaterial;
 			foreach (var renderer in targetRenderers) {
