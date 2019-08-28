@@ -2258,22 +2258,22 @@ PrefabInstance:
     - target: {fileID: 1779408303602341095, guid: a1e2d767a09fb1147b3288fe739d6373,
         type: 3}
       propertyPath: m_text
-      value: Development testing levels
+      value: Tutorials
       objectReference: {fileID: 0}
     - target: {fileID: 1779408303602341095, guid: a1e2d767a09fb1147b3288fe739d6373,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 26
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1779408303602341095, guid: a1e2d767a09fb1147b3288fe739d6373,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1779408303602341095, guid: a1e2d767a09fb1147b3288fe739d6373,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1779408303602341095, guid: a1e2d767a09fb1147b3288fe739d6373,
         type: 3}
