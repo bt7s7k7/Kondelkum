@@ -15,6 +15,7 @@ public class LevelPrototype : ScriptableObject {
 	public LevelPrototype[] requirements;
 	public SceneReference scene;
 	public bool allowWorldSwitch;
+	public bool allowSwitchWithCube;
 	[B.RefereceEditor]
 	public LevelPrototype nextLevel;
 	[Multiline]

@@ -14,6 +14,7 @@ public class WorldSwitcher : MonoBehaviour {
 	public LayerMask worldBMask;
 	public ParticleSystem particlesA;
 	public ParticleSystem particlesB;
+	public CubeStore store;
 	[Space]
 	public string worldALayer = "WorldA";
 	public string worldBLayer = "WorldB";
@@ -36,7 +37,7 @@ public class WorldSwitcher : MonoBehaviour {
 	}
 
 	public void SwitchIfEnabled() {
-		if (LevelManager.instance.prototype.allowWorldSwitch) Switch();
+		if (LevelManager.instance.prototype.allowWorldSwitch && (LevelManager.instance.prototype.allowSwitchWithCube ? true : store.gotCube == null)) Switch();
 	}
 
 	public GameObject player;
