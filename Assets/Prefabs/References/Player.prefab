@@ -5200,6 +5200,7 @@ MonoBehaviour:
     m_Bits: 1335
   particlesA: {fileID: 2705237203933759723}
   particlesB: {fileID: 4005345799741439282}
+  store: {fileID: 4039480581044250509}
   worldALayer: WorldA
   worldBLayer: WorldB
   isInBWorld: 0

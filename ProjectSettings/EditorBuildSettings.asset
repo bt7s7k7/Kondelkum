@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Tutorials/CubeTutorial.unity
     guid: 75dd60862b22ea24ba682784c72fa54e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tutorials/SwitchTutorial.unity
+    guid: bef2a38f2ba10da4c989c43d606ec8d7
   m_configObjects: {}
