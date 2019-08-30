@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SwitchTutorial
   m_EditorClassIdentifier: 
   customLabel: Switch tutorial
-  number: 3
+  number: 4
   id: tutorial_switch
   requirements:
-  - {fileID: 11400000, guid: 374d91be07c22f14a997906f3f29e0a6, type: 2}
+  - {fileID: 11400000, guid: e062a23e6e58acc40a9f78c68e4b822b, type: 2}
   scene:
     sceneAsset: {fileID: 102900000, guid: bef2a38f2ba10da4c989c43d606ec8d7, type: 3}
     scenePath: Assets/Scenes/Levels/Tutorials/SwitchTutorial.unity

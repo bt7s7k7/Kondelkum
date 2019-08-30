@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d518de92a9e80a4e819b83234fbad79, type: 3}
   m_Name: testElements
   m_EditorClassIdentifier: 
-  customLabel: Level Elements Test
-  number: 2
+  customLabel: Button tutorial
+  number: 3
   id: test_2
   requirements:
-  - {fileID: 11400000, guid: 7ff08beed601f92409d522d5c2012da7, type: 2}
-  - {fileID: 11400000, guid: 1a650b09a89db8a4ca14a45fac5ff754, type: 2}
+  - {fileID: 11400000, guid: 374d91be07c22f14a997906f3f29e0a6, type: 2}
   scene:
     sceneAsset: {fileID: 102900000, guid: 4ee2bd7dc9fbe2f45b6900fb8e0e4e9b, type: 3}
     scenePath: Assets/Scenes/Levels/TestLevels/testLevelElements.unity
   allowWorldSwitch: 0
-  nextLevel: {fileID: 0}
-  desc: "This level test level elements such as:\n- Buttons\n- Pressure plates\n-
-    Spawners \n- Cubes"
+  allowSwitchWithCube: 0
+  nextLevel: {fileID: 11400000, guid: 915d8d72d6d43294197f106e9d70d314, type: 2}
+  desc: About a button

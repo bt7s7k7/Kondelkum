@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SwitchParkour
   m_EditorClassIdentifier: 
   customLabel: Manual switch tutorial
-  number: 4
+  number: 5
   id: demo_parkour
   requirements:
   - {fileID: 11400000, guid: 915d8d72d6d43294197f106e9d70d314, type: 2}
