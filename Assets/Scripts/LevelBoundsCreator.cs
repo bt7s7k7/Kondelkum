@@ -32,6 +32,13 @@ public class LevelBoundsCreator : MonoBehaviour {
 		posZ.localScale = negZ.localScale = new Vector3(levelSize.x, height, 1);
 		posX.localScale = negX.localScale = new Vector3(levelSize.y, height, 1);
 	}
+
+	private void Start() {
+		posX.gameObject.SetActive(true);
+		posZ.gameObject.SetActive(true);
+		negX.gameObject.SetActive(true);
+		negZ.gameObject.SetActive(true);
+	}
 }
 
 #if UNITY_EDITOR

@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: f903f8f4c3bff77448fe27a5372765f9
-labels:
-- BlockVolume
-PrefabImporter:
+guid: 8cfe73ec31f1e8049a5ec26a1697e77b
+folderAsset: yes
+DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
