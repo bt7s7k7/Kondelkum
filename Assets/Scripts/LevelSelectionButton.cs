@@ -38,6 +38,9 @@ public class LevelSelectionButton : MonoBehaviour {
 			}
 		}
 		desc += levelPrototype.desc;
+		if (levelPrototype.allowWorldSwitch) {
+			desc += "\n\nThis level allows manual world switch";
+		}
 		LevelButtonInfo.instance.desc.text = desc;
 	}
 
