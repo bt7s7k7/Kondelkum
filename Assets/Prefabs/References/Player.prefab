@@ -5155,7 +5155,7 @@ MonoBehaviour:
   fallBoost: 2
   fallBoostThreshold: 0
   maxFallSpeed: 100
-  minY: -100
+  minY: -50
   safePos: {x: 0, y: 0, z: 0}
 --- !u!114 &6371907207922297428
 MonoBehaviour:

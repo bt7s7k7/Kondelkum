@@ -38,6 +38,8 @@ public class LevelBoundsCreator : MonoBehaviour {
 [CustomEditor(typeof(LevelBoundsCreator))]
 public class LevelBoundsCreatorEditor : B.Beditor {
 
+	bool moving;
+
 	private void OnSceneGUI() {
 		var bounds = target as LevelBoundsCreator;
 		var size = bounds.levelSize;
@@ -73,8 +75,22 @@ public class LevelBoundsCreatorEditor : B.Beditor {
 		posDelta -= negZDelta / 4 * Vector3.forward;
 		sizeDelta += negZDelta / 2 * Vector2.up;
 
+		if (posDelta.sqrMagnitude > Mathf.Epsilon || sizeDelta.sqrMagnitude > Mathf.Epsilon) {
+			if (!moving) {
+				moving = true;
+				Undo.RecordObjects(new Object[] { bounds, bounds.transform }, "Changed bounds size");
+			}
+		} else {
+			moving = false;
+		}
+
 		bounds.levelSize += sizeDelta;
 		bounds.transform.position += posDelta;
+
+		if (posDelta.sqrMagnitude > Mathf.Epsilon || sizeDelta.sqrMagnitude > Mathf.Epsilon) {
+			PrefabUtility.RecordPrefabInstancePropertyModifications(bounds);
+			PrefabUtility.RecordPrefabInstancePropertyModifications(bounds.transform);
+		}
 
 		bounds.CreateEdges();
 	}

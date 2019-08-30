@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Tutorials/SwitchTutorial.unity
     guid: bef2a38f2ba10da4c989c43d606ec8d7
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tutorials/SwitchParkour.unity
+    guid: 854d4fee948a2594d861cdf370413ba0
   m_configObjects: {}
