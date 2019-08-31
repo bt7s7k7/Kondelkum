@@ -15,10 +15,12 @@ MonoBehaviour:
   customLabel: Test Level
   number: 1
   id: test_1
-  requirements: []
+  requirements:
+  - {fileID: 11400000, guid: 883c0c4440485d840b6d2fab1fe50c8b, type: 2}
   scene:
     sceneAsset: {fileID: 102900000, guid: 5adf8bdd4844aab43b4fad77b450a334, type: 3}
     scenePath: Assets/Scenes/Levels/TestLevels/testLevel.unity
   allowWorldSwitch: 1
+  allowSwitchWithCube: 0
   nextLevel: {fileID: 11400000, guid: 1a650b09a89db8a4ca14a45fac5ff754, type: 2}
   desc: Test level built for testing

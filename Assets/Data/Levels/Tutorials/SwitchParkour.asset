@@ -22,5 +22,5 @@ MonoBehaviour:
     scenePath: Assets/Scenes/Levels/Tutorials/SwitchParkour.unity
   allowWorldSwitch: 1
   allowSwitchWithCube: 0
-  nextLevel: {fileID: 0}
+  nextLevel: {fileID: 11400000, guid: 883c0c4440485d840b6d2fab1fe50c8b, type: 2}
   desc: In which we learn reality manipulation

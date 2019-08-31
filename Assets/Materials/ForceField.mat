@@ -63,12 +63,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_78A127B7: 0
+    - Vector1_A5D9F7C7: 0
     - Vector1_E09CAE6F: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DistNoiseScale: 1.5
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FieldWiggleMul: 0.04

@@ -16,11 +16,11 @@ MonoBehaviour:
   number: 3
   id: test_2
   requirements:
-  - {fileID: 11400000, guid: 374d91be07c22f14a997906f3f29e0a6, type: 2}
+  - {fileID: 11400000, guid: 7ff08beed601f92409d522d5c2012da7, type: 2}
   scene:
     sceneAsset: {fileID: 102900000, guid: 4ee2bd7dc9fbe2f45b6900fb8e0e4e9b, type: 3}
     scenePath: Assets/Scenes/Levels/TestLevels/testLevelElements.unity
   allowWorldSwitch: 0
   allowSwitchWithCube: 0
-  nextLevel: {fileID: 11400000, guid: 915d8d72d6d43294197f106e9d70d314, type: 2}
+  nextLevel: {fileID: 0}
   desc: About a button
