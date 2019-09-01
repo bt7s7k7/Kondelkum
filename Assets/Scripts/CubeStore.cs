@@ -22,7 +22,7 @@ public class CubeStore : B.Controll.AbstractSink {
 			} else {
 				pos = origin + direction * toBlock.maxDist;
 			}
-			System.Func<bool> checkBox = () => Physics.CheckBox(pos, Vector3.one / 2, rotation, toBlock.raycastMask, QueryTriggerInteraction.Ignore);
+			bool checkBox() => Physics.CheckBox(pos, Vector3.one / 2, rotation, toBlock.raycastMask, QueryTriggerInteraction.Ignore);
 			if (checkBox()) {
 				if (Physics.Raycast(origin, direction, out hit, 1000, toBlock.raycastMask, QueryTriggerInteraction.Ignore)) {
 					pos = hit.point + hit.normal * 0.51f;
