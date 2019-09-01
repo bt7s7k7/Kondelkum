@@ -12,12 +12,11 @@ namespace B {
 			public float sprintMul = 2;
 			public float crouchMul = 0.5f;
 			public float jumpForce = 5;
-			public float fallBoost = 2;
-			public float fallBoostThreshold = 0.1f;
 			public float maxFallSpeed = 100;
-			protected float controllerVerticalSpeed;
+			protected float verticalSpeed;
 			public float minY = -100;
 			public Vector3 safePos;
+			public float gravityMul = 2;
 #if UNITY_EDITOR
 			protected Vector3 debug_toMove;
 			protected Vector3 debug_delta;
@@ -41,45 +40,43 @@ namespace B {
 
 				HandleLooking();
 
-				HandleJumping();
-				HandleMovement();
-				ResetTasks();
+				var move = Vector3.zero;
 
-				if (body.position.y < minY) {
-					controllerVerticalSpeed = 0;
-					body.position = safePos;
-				}
-			}
-
-			virtual protected void HandleMovement() {
-#if UNITY_EDITOR
-				debug_toMove = toMoveLocal + toMoveGlobal;
-#endif
+				// Handle jumping
+				if (controller.isGrounded && toJump) verticalSpeed += jumpForce;
+				// Handle moving
 				var delta = Vector3.Scale(toMoveGlobal + body.TransformVector(toMoveLocal), Vector3.forward + Vector3.right);
 				var magnitude = delta.magnitude;
 				if (magnitude > 1) {
 					delta /= magnitude;
 				}
+				// Add movement delta to character move
+				move += delta * Time.deltaTime * speed * (toSprint ? sprintMul : 1) * (toCrouch ? crouchMul : 1);
+				// Move based on vertical speed
+				move += Vector3.up * verticalSpeed * Time.deltaTime;
 #if UNITY_EDITOR
+				debug_toMove = toMoveLocal + toMoveGlobal;
 				debug_delta = delta;
 #endif
 
-				controller.Move(delta * Time.deltaTime * speed * (toSprint ? sprintMul : 1) * (toCrouch ? crouchMul : 1));
+				controller.Move(move);
+
+				verticalSpeed += GetGravity() * Time.deltaTime;
+				if (verticalSpeed < -maxFallSpeed) verticalSpeed = -maxFallSpeed;
+
+				if (controller.isGrounded) verticalSpeed = -1;
+
+				ResetTasks();
+
+				if (body.position.y < minY) {
+					verticalSpeed = 0;
+					body.position = safePos;
+					Physics.SyncTransforms();
+				}
 			}
 
-			virtual protected void HandleJumping() {
-
-				controller.Move(Vector3.up * (controllerVerticalSpeed < fallBoostThreshold ? controllerVerticalSpeed * fallBoost : controllerVerticalSpeed) * Time.deltaTime);
-				if (!controller.isGrounded) controllerVerticalSpeed -= -Physics.gravity.y * Time.deltaTime;
-				else controllerVerticalSpeed = Physics.gravity.y;
-				if (-controllerVerticalSpeed > maxFallSpeed) {
-					controllerVerticalSpeed = -maxFallSpeed;
-				}
-
-				if (controller.isGrounded && toJump) {
-					controllerVerticalSpeed = jumpForce;
-				}
-
+			virtual protected float GetGravity() {
+				return Physics.gravity.y * gravityMul;
 			}
 
 			virtual protected void HandleLooking() {
@@ -92,7 +89,7 @@ namespace B {
 
 #if UNITY_EDITOR
 			virtual public string GetDebugInfo() {
-				return "Controller vertical speed: " + controllerVerticalSpeed
+				return "Controller vertical speed: " + verticalSpeed
 					+ "\nTo move: " + debug_toMove
 					+ "\nDelta: " + debug_delta
 					+ "\nTo rotate: " + debug_rotation

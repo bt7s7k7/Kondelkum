@@ -5151,12 +5151,11 @@ MonoBehaviour:
   speed: 6
   sprintMul: 2
   crouchMul: 0.5
-  jumpForce: 5
-  fallBoost: 2
-  fallBoostThreshold: 0
+  jumpForce: 7
   maxFallSpeed: 100
   minY: -50
   safePos: {x: 0, y: 0, z: 0}
+  gravityMul: 2
 --- !u!114 &6371907207922297428
 MonoBehaviour:
   m_ObjectHideFlags: 0
